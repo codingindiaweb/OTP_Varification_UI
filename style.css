@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: all .5s ease;
+}
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #0093E9;
+    background-image: linear-gradient(90deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.otp-card{
+    text-align: center;
+    background: #fff;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px -10px #000;
+    height: 450px;
+}
+
+.otp-card-input{
+    margin: 30px 0;
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+    grid-template-columns: repeat(5,auto);
+}
+
+.otp-card-input input{
+    width: 60px;
+    height: 70px;
+    font-size: 35px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.otp-card-input input:focus{
+    outline: 2px solid #0093E9;
+    border-color: transparent;
+}
+
+.otp-card p{
+    padding: 15px 0 15px 0;
+}
+
+.otp-card p a{
+    text-decoration: none;
+    font-weight: 700;
+    color: rgb(249, 6, 249);
+}
+
+.otp-card button{
+    background: #0093E9;
+    background-image: linear-gradient(360deg , #0093E9 0% , #80D0C7 100%);
+    border: none;
+    outline: none;
+    padding: 15px 50px;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50px;
+}
+.otp-card button:hover{
+    opacity: .8;
+}
+
+.otp-card button[disabled]{
+    opacity: .6;
+    cursor: default;
+}
+
+#toast{
+    position: absolute;
+    left: 50%;
+    margin: 15px 0 25px 0;
+    transform: translateX(-50%);
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+/* lets make it responsive*/
+
+@media (max-width:600px){
+    .otp-card{
+        margin: 10px;
+        height: 380px;
+    }
+    .otp-card-input{
+        display: grid;
+        gap: 15px;
+    }
+
+    .otp-card-input input{
+        width: 50px;
+        height: 60px;
+        font-size: 25px;
+    }
+    .otp-card button{
+        font-size: 16px;
+    }
+    #toast{
+        font-size: 12px;
+    }
+}
